@@ -1,0 +1,99 @@
+typedef char __nv_bool;
+# 212 "/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/stddef.h" 3
+typedef unsigned long size_t;
+#include "crt/device_runtime.h"
+# 75 "/opt/cuda/10.2/bin/../targets/x86_64-linux/include/cuda_device_runtime_api.h"
+___device__(static  __no_sc__) enum cudaError cudaMalloc(void **, size_t);
+# 80 "/opt/cuda/10.2/bin/../targets/x86_64-linux/include/cuda_device_runtime_api.h"
+___device__(static  __no_sc__) enum cudaError cudaFuncGetAttributes(struct cudaFuncAttributes *, const void *);
+# 85 "/opt/cuda/10.2/bin/../targets/x86_64-linux/include/cuda_device_runtime_api.h"
+___device__(static  __no_sc__) enum cudaError cudaDeviceGetAttribute(int *, enum cudaDeviceAttr, int);
+# 90 "/opt/cuda/10.2/bin/../targets/x86_64-linux/include/cuda_device_runtime_api.h"
+___device__(static  __no_sc__) enum cudaError cudaGetDevice(int *);
+# 95 "/opt/cuda/10.2/bin/../targets/x86_64-linux/include/cuda_device_runtime_api.h"
+___device__(static  __no_sc__) enum cudaError cudaOccupancyMaxActiveBlocksPerMultiprocessor(int *, const void *, int, size_t);
+# 100 "/opt/cuda/10.2/bin/../targets/x86_64-linux/include/cuda_device_runtime_api.h"
+___device__(static  __no_sc__) enum cudaError cudaOccupancyMaxActiveBlocksPerMultiprocessorWithFlags(int *, const void *, int, size_t, unsigned);
+#include "common_functions.h"
+# 75 "/opt/cuda/10.2/bin/../targets/x86_64-linux/include/cuda_device_runtime_api.h"
+___device__(static  __no_sc__) enum cudaError cudaMalloc(
+# 75 "/opt/cuda/10.2/bin/../targets/x86_64-linux/include/cuda_device_runtime_api.h"
+void **p, 
+# 75 "/opt/cuda/10.2/bin/../targets/x86_64-linux/include/cuda_device_runtime_api.h"
+size_t s){
+# 76 "/opt/cuda/10.2/bin/../targets/x86_64-linux/include/cuda_device_runtime_api.h"
+{
+# 77 "/opt/cuda/10.2/bin/../targets/x86_64-linux/include/cuda_device_runtime_api.h"
+return cudaErrorUnknown;
+# 78 "/opt/cuda/10.2/bin/../targets/x86_64-linux/include/cuda_device_runtime_api.h"
+}}
+# 80 "/opt/cuda/10.2/bin/../targets/x86_64-linux/include/cuda_device_runtime_api.h"
+___device__(static  __no_sc__) enum cudaError cudaFuncGetAttributes(
+# 80 "/opt/cuda/10.2/bin/../targets/x86_64-linux/include/cuda_device_runtime_api.h"
+struct cudaFuncAttributes *p, 
+# 80 "/opt/cuda/10.2/bin/../targets/x86_64-linux/include/cuda_device_runtime_api.h"
+const void *c){
+# 81 "/opt/cuda/10.2/bin/../targets/x86_64-linux/include/cuda_device_runtime_api.h"
+{
+# 82 "/opt/cuda/10.2/bin/../targets/x86_64-linux/include/cuda_device_runtime_api.h"
+return cudaErrorUnknown;
+# 83 "/opt/cuda/10.2/bin/../targets/x86_64-linux/include/cuda_device_runtime_api.h"
+}}
+# 85 "/opt/cuda/10.2/bin/../targets/x86_64-linux/include/cuda_device_runtime_api.h"
+___device__(static  __no_sc__) enum cudaError cudaDeviceGetAttribute(
+# 85 "/opt/cuda/10.2/bin/../targets/x86_64-linux/include/cuda_device_runtime_api.h"
+int *value, 
+# 85 "/opt/cuda/10.2/bin/../targets/x86_64-linux/include/cuda_device_runtime_api.h"
+enum cudaDeviceAttr attr, 
+# 85 "/opt/cuda/10.2/bin/../targets/x86_64-linux/include/cuda_device_runtime_api.h"
+int device){
+# 86 "/opt/cuda/10.2/bin/../targets/x86_64-linux/include/cuda_device_runtime_api.h"
+{
+# 87 "/opt/cuda/10.2/bin/../targets/x86_64-linux/include/cuda_device_runtime_api.h"
+return cudaErrorUnknown;
+# 88 "/opt/cuda/10.2/bin/../targets/x86_64-linux/include/cuda_device_runtime_api.h"
+}}
+# 90 "/opt/cuda/10.2/bin/../targets/x86_64-linux/include/cuda_device_runtime_api.h"
+___device__(static  __no_sc__) enum cudaError cudaGetDevice(
+# 90 "/opt/cuda/10.2/bin/../targets/x86_64-linux/include/cuda_device_runtime_api.h"
+int *device){
+# 91 "/opt/cuda/10.2/bin/../targets/x86_64-linux/include/cuda_device_runtime_api.h"
+{
+# 92 "/opt/cuda/10.2/bin/../targets/x86_64-linux/include/cuda_device_runtime_api.h"
+return cudaErrorUnknown;
+# 93 "/opt/cuda/10.2/bin/../targets/x86_64-linux/include/cuda_device_runtime_api.h"
+}}
+# 95 "/opt/cuda/10.2/bin/../targets/x86_64-linux/include/cuda_device_runtime_api.h"
+___device__(static  __no_sc__) enum cudaError cudaOccupancyMaxActiveBlocksPerMultiprocessor(
+# 95 "/opt/cuda/10.2/bin/../targets/x86_64-linux/include/cuda_device_runtime_api.h"
+int *numBlocks, 
+# 95 "/opt/cuda/10.2/bin/../targets/x86_64-linux/include/cuda_device_runtime_api.h"
+const void *func, 
+# 95 "/opt/cuda/10.2/bin/../targets/x86_64-linux/include/cuda_device_runtime_api.h"
+int blockSize, 
+# 95 "/opt/cuda/10.2/bin/../targets/x86_64-linux/include/cuda_device_runtime_api.h"
+size_t dynamicSmemSize){
+# 96 "/opt/cuda/10.2/bin/../targets/x86_64-linux/include/cuda_device_runtime_api.h"
+{
+# 97 "/opt/cuda/10.2/bin/../targets/x86_64-linux/include/cuda_device_runtime_api.h"
+return cudaErrorUnknown;
+# 98 "/opt/cuda/10.2/bin/../targets/x86_64-linux/include/cuda_device_runtime_api.h"
+}}
+# 100 "/opt/cuda/10.2/bin/../targets/x86_64-linux/include/cuda_device_runtime_api.h"
+___device__(static  __no_sc__) enum cudaError cudaOccupancyMaxActiveBlocksPerMultiprocessorWithFlags(
+# 100 "/opt/cuda/10.2/bin/../targets/x86_64-linux/include/cuda_device_runtime_api.h"
+int *numBlocks, 
+# 100 "/opt/cuda/10.2/bin/../targets/x86_64-linux/include/cuda_device_runtime_api.h"
+const void *func, 
+# 100 "/opt/cuda/10.2/bin/../targets/x86_64-linux/include/cuda_device_runtime_api.h"
+int blockSize, 
+# 100 "/opt/cuda/10.2/bin/../targets/x86_64-linux/include/cuda_device_runtime_api.h"
+size_t dynamicSmemSize, 
+# 100 "/opt/cuda/10.2/bin/../targets/x86_64-linux/include/cuda_device_runtime_api.h"
+unsigned flags){
+# 101 "/opt/cuda/10.2/bin/../targets/x86_64-linux/include/cuda_device_runtime_api.h"
+{
+# 102 "/opt/cuda/10.2/bin/../targets/x86_64-linux/include/cuda_device_runtime_api.h"
+return cudaErrorUnknown;
+# 103 "/opt/cuda/10.2/bin/../targets/x86_64-linux/include/cuda_device_runtime_api.h"
+}}
