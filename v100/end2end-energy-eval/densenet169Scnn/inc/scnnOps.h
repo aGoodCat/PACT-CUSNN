@@ -12,7 +12,7 @@ public:
     unsigned int N;
     unsigned int hOut;
     unsigned int wOut;
-    unsigned int TH = 2;
+    unsigned int TH = 3;
     unsigned int TW = 7;
     unsigned int TC = 2;
     unsigned int TCS;
@@ -36,9 +36,9 @@ public:
     unsigned int N;
     unsigned int hOut;
     unsigned int wOut;
-    unsigned int TH = 3;
+    unsigned int TH = 2;
     unsigned int TW = 7;
-    unsigned int TC = 2;
+    unsigned int TC = 4;
     unsigned int TCS;
     float *cpuKernel;
     float *output;
@@ -60,9 +60,9 @@ public:
     unsigned int N;
     unsigned int hOut;
     unsigned int wOut;
-    unsigned int TH = 2;
+    unsigned int TH = 4;
     unsigned int TW = 7;
-    unsigned int TC = 4;
+    unsigned int TC = 2;
     unsigned int TCS;
     float *cpuKernel;
     float *output;

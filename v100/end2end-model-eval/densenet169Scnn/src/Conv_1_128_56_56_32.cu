@@ -383,9 +383,9 @@ __device__ void conv_1_128_56_56_32_load_data_2_register(float *__restrict__ dat
     }
 }
 __device__ void conv_1_128_56_56_32_load_input_2_shared_memory(float *values,unsigned int *c_lens,char *ids,
-                                           float *shared_input,char *shared_ids,unsigned int *shared_lens,
-                                           unsigned int warp_id,unsigned int lane_id,unsigned int batch_id,
-                                           unsigned int tile_id,unsigned int tile_c_id){
+                                                               float *shared_input,char *shared_ids,unsigned int *shared_lens,
+                                                               unsigned int warp_id,unsigned int lane_id,unsigned int batch_id,
+                                                               unsigned int tile_id,unsigned int tile_c_id){
     for(unsigned int c_id=warp_id;c_id<8&&tile_c_id+c_id<128;c_id+=1){
         unsigned int end_index = c_lens[batch_id*128*168+(tile_c_id+c_id)*168+tile_id];
         if(lane_id ==0){
@@ -400,8 +400,8 @@ __device__ void conv_1_128_56_56_32_load_input_2_shared_memory(float *values,uns
     }
 }
 __global__ void conv_1_128_56_56_32_conv2d(float * __restrict__ values, unsigned int * __restrict__ c_lens,
-                       char * __restrict__ ids,
-                       const float * __restrict__ kernel, float * __restrict__ outputs){
+                                           char * __restrict__ ids,
+                                           const float * __restrict__ kernel, float * __restrict__ outputs){
     __shared__ float input[8*(4+3-1)*(5+3-1)];
     __shared__ char input_ids[8*(4+3-1)*(5+3-1)];
     __shared__ unsigned int channel_lens[(8)];

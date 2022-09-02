@@ -313,6 +313,15 @@ int main(int argc, char *argv[]){
     }
     cout<<"densenet169 cuDNN costs "<<inference_time/100<<" ms"<<endl;
     cout<<endl;
+    unsigned int outputSize = 1000;
+    float *hOutput = (float *)malloc(outputSize*sizeof(float));
+    cudaMemcpy(hOutput,output,outputSize*sizeof(float),cudaMemcpyDeviceToHost);
+    vector<float> out_bin;
+    for(int i=0;i<outputSize;++i){
+        out_bin.push_back(hOutput[i]);
+    }
+    std::ofstream ofp("d.bin", std::ios::out | std::ios::binary);
+    ofp.write(reinterpret_cast<const char*>(out_bin.data()), out_bin.size() * sizeof(float));
     return 0;
 }
 

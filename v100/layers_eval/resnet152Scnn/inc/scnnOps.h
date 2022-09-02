@@ -12,9 +12,9 @@ public:
     unsigned int N;
     unsigned int hOut;
     unsigned int wOut;
-    unsigned int TH = 4;
+    unsigned int TH = 2;
     unsigned int TW = 7;
-    unsigned int TC = 8;
+    unsigned int TC = 16;
     unsigned int TCS;
     float alpha = 1.0f;
     float beta = 0.0f;
@@ -43,9 +43,9 @@ public:
     unsigned int N;
     unsigned int hOut;
     unsigned int wOut;
-    unsigned int TH = 4;
+    unsigned int TH = 2;
     unsigned int TW = 7;
-    unsigned int TC = 8;
+    unsigned int TC = 16;
     unsigned int TCS;
     float alpha = 1.0f;
     float beta = 0.0f;
@@ -76,7 +76,7 @@ public:
     unsigned int wOut;
     unsigned int TH = 2;
     unsigned int TW = 7;
-    unsigned int TC = 16;
+    unsigned int TC = 8;
     unsigned int TCS;
     float alpha = 1.0f;
     float beta = 0.0f;
@@ -107,7 +107,7 @@ public:
     unsigned int wOut;
     unsigned int TH = 2;
     unsigned int TW = 7;
-    unsigned int TC = 16;
+    unsigned int TC = 4;
     unsigned int TCS;
     float alpha = 1.0f;
     float beta = 0.0f;

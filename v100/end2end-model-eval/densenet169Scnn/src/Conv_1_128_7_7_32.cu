@@ -147,7 +147,7 @@ __device__ void conv_1_128_7_7_32_switch_function( unsigned int switch_condition
             }
             break;
         case 18:
-            for ( int r = 1; r < 3; r++) {
+            for ( int r = 0; r < 3; r++) {
                 for ( int s = 0; s < 1; s++) {
                     float result = v * temp_kernel[r*3+s];
                     temp_result[(2-r)*7+(0-s)] += result;
@@ -155,7 +155,7 @@ __device__ void conv_1_128_7_7_32_switch_function( unsigned int switch_condition
             }
             break;
         case 19:
-            for ( int r = 1; r < 3; r++) {
+            for ( int r = 0; r < 3; r++) {
                 for ( int s = 0; s < 2; s++) {
                     float result = v * temp_kernel[r*3+s];
                     temp_result[(2-r)*7+(1-s)] += result;
@@ -163,7 +163,7 @@ __device__ void conv_1_128_7_7_32_switch_function( unsigned int switch_condition
             }
             break;
         case 20:
-            for ( int r = 1; r < 3; r++) {
+            for ( int r = 0; r < 3; r++) {
                 for ( int s = 0; s < 3; s++) {
                     float result = v * temp_kernel[r*3+s];
                     temp_result[(2-r)*7+(2-s)] += result;
@@ -171,7 +171,7 @@ __device__ void conv_1_128_7_7_32_switch_function( unsigned int switch_condition
             }
             break;
         case 21:
-            for ( int r = 1; r < 3; r++) {
+            for ( int r = 0; r < 3; r++) {
                 for ( int s = 0; s < 3; s++) {
                     float result = v * temp_kernel[r*3+s];
                     temp_result[(2-r)*7+(3-s)] += result;
@@ -179,7 +179,7 @@ __device__ void conv_1_128_7_7_32_switch_function( unsigned int switch_condition
             }
             break;
         case 22:
-            for ( int r = 1; r < 3; r++) {
+            for ( int r = 0; r < 3; r++) {
                 for ( int s = 0; s < 3; s++) {
                     float result = v * temp_kernel[r*3+s];
                     temp_result[(2-r)*7+(4-s)] += result;
@@ -187,7 +187,7 @@ __device__ void conv_1_128_7_7_32_switch_function( unsigned int switch_condition
             }
             break;
         case 23:
-            for ( int r = 1; r < 3; r++) {
+            for ( int r = 0; r < 3; r++) {
                 for ( int s = 0; s < 3; s++) {
                     float result = v * temp_kernel[r*3+s];
                     temp_result[(2-r)*7+(5-s)] += result;
@@ -195,7 +195,7 @@ __device__ void conv_1_128_7_7_32_switch_function( unsigned int switch_condition
             }
             break;
         case 24:
-            for ( int r = 1; r < 3; r++) {
+            for ( int r = 0; r < 3; r++) {
                 for ( int s = 0; s < 3; s++) {
                     float result = v * temp_kernel[r*3+s];
                     temp_result[(2-r)*7+(6-s)] += result;
@@ -203,7 +203,7 @@ __device__ void conv_1_128_7_7_32_switch_function( unsigned int switch_condition
             }
             break;
         case 25:
-            for ( int r = 1; r < 3; r++) {
+            for ( int r = 0; r < 3; r++) {
                 for ( int s = 1; s < 3; s++) {
                     float result = v * temp_kernel[r*3+s];
                     temp_result[(2-r)*7+(7-s)] += result;
@@ -211,7 +211,7 @@ __device__ void conv_1_128_7_7_32_switch_function( unsigned int switch_condition
             }
             break;
         case 26:
-            for ( int r = 1; r < 3; r++) {
+            for ( int r = 0; r < 3; r++) {
                 for ( int s = 2; s < 3; s++) {
                     float result = v * temp_kernel[r*3+s];
                     temp_result[(2-r)*7+(8-s)] += result;
@@ -219,7 +219,7 @@ __device__ void conv_1_128_7_7_32_switch_function( unsigned int switch_condition
             }
             break;
         case 27:
-            for ( int r = 2; r < 3; r++) {
+            for ( int r = 1; r < 3; r++) {
                 for ( int s = 0; s < 1; s++) {
                     float result = v * temp_kernel[r*3+s];
                     temp_result[(3-r)*7+(0-s)] += result;
@@ -227,7 +227,7 @@ __device__ void conv_1_128_7_7_32_switch_function( unsigned int switch_condition
             }
             break;
         case 28:
-            for ( int r = 2; r < 3; r++) {
+            for ( int r = 1; r < 3; r++) {
                 for ( int s = 0; s < 2; s++) {
                     float result = v * temp_kernel[r*3+s];
                     temp_result[(3-r)*7+(1-s)] += result;
@@ -235,7 +235,7 @@ __device__ void conv_1_128_7_7_32_switch_function( unsigned int switch_condition
             }
             break;
         case 29:
-            for ( int r = 2; r < 3; r++) {
+            for ( int r = 1; r < 3; r++) {
                 for ( int s = 0; s < 3; s++) {
                     float result = v * temp_kernel[r*3+s];
                     temp_result[(3-r)*7+(2-s)] += result;
@@ -243,7 +243,7 @@ __device__ void conv_1_128_7_7_32_switch_function( unsigned int switch_condition
             }
             break;
         case 30:
-            for ( int r = 2; r < 3; r++) {
+            for ( int r = 1; r < 3; r++) {
                 for ( int s = 0; s < 3; s++) {
                     float result = v * temp_kernel[r*3+s];
                     temp_result[(3-r)*7+(3-s)] += result;
@@ -251,7 +251,7 @@ __device__ void conv_1_128_7_7_32_switch_function( unsigned int switch_condition
             }
             break;
         case 31:
-            for ( int r = 2; r < 3; r++) {
+            for ( int r = 1; r < 3; r++) {
                 for ( int s = 0; s < 3; s++) {
                     float result = v * temp_kernel[r*3+s];
                     temp_result[(3-r)*7+(4-s)] += result;
@@ -259,7 +259,7 @@ __device__ void conv_1_128_7_7_32_switch_function( unsigned int switch_condition
             }
             break;
         case 32:
-            for ( int r = 2; r < 3; r++) {
+            for ( int r = 1; r < 3; r++) {
                 for ( int s = 0; s < 3; s++) {
                     float result = v * temp_kernel[r*3+s];
                     temp_result[(3-r)*7+(5-s)] += result;
@@ -267,7 +267,7 @@ __device__ void conv_1_128_7_7_32_switch_function( unsigned int switch_condition
             }
             break;
         case 33:
-            for ( int r = 2; r < 3; r++) {
+            for ( int r = 1; r < 3; r++) {
                 for ( int s = 0; s < 3; s++) {
                     float result = v * temp_kernel[r*3+s];
                     temp_result[(3-r)*7+(6-s)] += result;
@@ -275,7 +275,7 @@ __device__ void conv_1_128_7_7_32_switch_function( unsigned int switch_condition
             }
             break;
         case 34:
-            for ( int r = 2; r < 3; r++) {
+            for ( int r = 1; r < 3; r++) {
                 for ( int s = 1; s < 3; s++) {
                     float result = v * temp_kernel[r*3+s];
                     temp_result[(3-r)*7+(7-s)] += result;
@@ -283,10 +283,82 @@ __device__ void conv_1_128_7_7_32_switch_function( unsigned int switch_condition
             }
             break;
         case 35:
-            for ( int r = 2; r < 3; r++) {
+            for ( int r = 1; r < 3; r++) {
                 for ( int s = 2; s < 3; s++) {
                     float result = v * temp_kernel[r*3+s];
                     temp_result[(3-r)*7+(8-s)] += result;
+                }
+            }
+            break;
+        case 36:
+            for ( int r = 2; r < 3; r++) {
+                for ( int s = 0; s < 1; s++) {
+                    float result = v * temp_kernel[r*3+s];
+                    temp_result[(4-r)*7+(0-s)] += result;
+                }
+            }
+            break;
+        case 37:
+            for ( int r = 2; r < 3; r++) {
+                for ( int s = 0; s < 2; s++) {
+                    float result = v * temp_kernel[r*3+s];
+                    temp_result[(4-r)*7+(1-s)] += result;
+                }
+            }
+            break;
+        case 38:
+            for ( int r = 2; r < 3; r++) {
+                for ( int s = 0; s < 3; s++) {
+                    float result = v * temp_kernel[r*3+s];
+                    temp_result[(4-r)*7+(2-s)] += result;
+                }
+            }
+            break;
+        case 39:
+            for ( int r = 2; r < 3; r++) {
+                for ( int s = 0; s < 3; s++) {
+                    float result = v * temp_kernel[r*3+s];
+                    temp_result[(4-r)*7+(3-s)] += result;
+                }
+            }
+            break;
+        case 40:
+            for ( int r = 2; r < 3; r++) {
+                for ( int s = 0; s < 3; s++) {
+                    float result = v * temp_kernel[r*3+s];
+                    temp_result[(4-r)*7+(4-s)] += result;
+                }
+            }
+            break;
+        case 41:
+            for ( int r = 2; r < 3; r++) {
+                for ( int s = 0; s < 3; s++) {
+                    float result = v * temp_kernel[r*3+s];
+                    temp_result[(4-r)*7+(5-s)] += result;
+                }
+            }
+            break;
+        case 42:
+            for ( int r = 2; r < 3; r++) {
+                for ( int s = 0; s < 3; s++) {
+                    float result = v * temp_kernel[r*3+s];
+                    temp_result[(4-r)*7+(6-s)] += result;
+                }
+            }
+            break;
+        case 43:
+            for ( int r = 2; r < 3; r++) {
+                for ( int s = 1; s < 3; s++) {
+                    float result = v * temp_kernel[r*3+s];
+                    temp_result[(4-r)*7+(7-s)] += result;
+                }
+            }
+            break;
+        case 44:
+            for ( int r = 2; r < 3; r++) {
+                for ( int s = 2; s < 3; s++) {
+                    float result = v * temp_kernel[r*3+s];
+                    temp_result[(4-r)*7+(8-s)] += result;
                 }
             }
             break;
@@ -307,10 +379,10 @@ __global__ void conv_1_128_7_7_32_transform(float *matrix, float *d_nnz, char *i
 
     int h = ((global_id - batch_id * 128 * 7 * 7)/128)/7+1;
     int w = ((global_id - batch_id * 128 * 7 * 7)/128)%7+1;
-    int th_start = min(h/2,4-1);
+    int th_start = min(h/3,3-1);
     int tw_start = min(w/7,1-1);
     for(int tile_h_id = th_start;tile_h_id>=0;tile_h_id--){
-        if((tile_h_id*2+2+3-1)<=h){
+        if((tile_h_id*3+3+3-1)<=h){
             break;
         }
         for(int tile_w_id = tw_start;tile_w_id>=0;tile_w_id--){
@@ -318,13 +390,13 @@ __global__ void conv_1_128_7_7_32_transform(float *matrix, float *d_nnz, char *i
                 break;
             }
             unsigned int tile_id = tile_h_id * 1 + tile_w_id;
-            unsigned int index = atomicAdd(&c_lens[batch_id*128*4+c*4+tile_id],1);
-            unsigned int abs_h = h - tile_h_id*2;
+            unsigned int index = atomicAdd(&c_lens[batch_id*128*3+c*3+tile_id],1);
+            unsigned int abs_h = h - tile_h_id*3;
             unsigned int abs_w = w - tile_w_id*7;
-            d_nnz[batch_id*128*4*(2+3-1)*(7+3-1)+
-                  c*4*(2+3-1)*(7+3-1)+tile_id*(2+3-1)*(7+3-1)+index] = v;
-            ids[batch_id*128*4*(2+3-1)*(7+3-1)+
-                c*4*(2+3-1)*(7+3-1)+tile_id*(2+3-1)*(7+3-1)+index] = abs_h*(7+3-1)+abs_w;
+            d_nnz[batch_id*128*3*(3+3-1)*(7+3-1)+
+                  c*3*(3+3-1)*(7+3-1)+tile_id*(3+3-1)*(7+3-1)+index] = v;
+            ids[batch_id*128*3*(3+3-1)*(7+3-1)+
+                c*3*(3+3-1)*(7+3-1)+tile_id*(3+3-1)*(7+3-1)+index] = abs_h*(7+3-1)+abs_w;
         }
     }
 }
@@ -336,39 +408,39 @@ __device__ void conv_1_128_7_7_32_load_data_2_register(float *__restrict__ data_
     }
 }
 __device__ void conv_1_128_7_7_32_load_input_2_shared_memory(float *values,unsigned int *c_lens,char *ids,
-                                           float *shared_input,char *shared_ids,unsigned int *shared_lens,
-                                           unsigned int warp_id,unsigned int lane_id,unsigned int batch_id,
-                                           unsigned int tile_id,unsigned int tile_c_id){
+                                                             float *shared_input,char *shared_ids,unsigned int *shared_lens,
+                                                             unsigned int warp_id,unsigned int lane_id,unsigned int batch_id,
+                                                             unsigned int tile_id,unsigned int tile_c_id){
     for(unsigned int c_id=warp_id;c_id<2&&tile_c_id+c_id<128;c_id+=1){
-        unsigned int end_index = c_lens[batch_id*128*4+(tile_c_id+c_id)*4+tile_id];
+        unsigned int end_index = c_lens[batch_id*128*3+(tile_c_id+c_id)*3+tile_id];
         if(lane_id ==0){
             shared_lens[c_id] = end_index;
         }
         for(unsigned int id = lane_id;id<end_index;id+=32){
-            shared_input[c_id*(2+3-1)*(7+3-1)+id] = values[batch_id*128*4*(2+3-1)*(7+3-1)+
-                                                           (tile_c_id+c_id)*4*(2+3-1)*(7+3-1)+tile_id*(2+3-1)*(7+3-1)+id];
-            shared_ids[c_id*(2+3-1)*(7+3-1)+id] = ids[batch_id*128*4*(2+3-1)*(7+3-1)+
-                                                      (tile_c_id+c_id)*4*(2+3-1)*(7+3-1)+tile_id*(2+3-1)*(7+3-1)+id];
+            shared_input[c_id*(3+3-1)*(7+3-1)+id] = values[batch_id*128*3*(3+3-1)*(7+3-1)+
+                                                           (tile_c_id+c_id)*3*(3+3-1)*(7+3-1)+tile_id*(3+3-1)*(7+3-1)+id];
+            shared_ids[c_id*(3+3-1)*(7+3-1)+id] = ids[batch_id*128*3*(3+3-1)*(7+3-1)+
+                                                      (tile_c_id+c_id)*3*(3+3-1)*(7+3-1)+tile_id*(3+3-1)*(7+3-1)+id];
         }
     }
 }
 __global__ void conv_1_128_7_7_32_conv2d(float * __restrict__ values, unsigned int * __restrict__ c_lens,
-                       char * __restrict__ ids,
-                       const float * __restrict__ kernel, float * __restrict__ outputs){
-    __shared__ float input[2*(2+3-1)*(7+3-1)];
-    __shared__ char input_ids[2*(2+3-1)*(7+3-1)];
+                                         char * __restrict__ ids,
+                                         const float * __restrict__ kernel, float * __restrict__ outputs){
+    __shared__ float input[2*(3+3-1)*(7+3-1)];
+    __shared__ char input_ids[2*(3+3-1)*(7+3-1)];
     __shared__ unsigned int channel_lens[(2)];
 
-    const unsigned int batch_id = (blockIdx.x/(64*4));
-    const unsigned int t_id = (blockIdx.x - batch_id*64*4)/64;
-    const unsigned int tile_h_id = (t_id / 1)*2;
+    const unsigned int batch_id = (blockIdx.x/(64*3));
+    const unsigned int t_id = (blockIdx.x - batch_id*64*3)/64;
+    const unsigned int tile_h_id = (t_id / 1)*3;
     const unsigned int tile_w_id = (t_id % 1)*7;
     const unsigned int index = blockIdx.x % (64);
     const unsigned int start_channel_index = index*2;
     const unsigned int warp_id = threadIdx.x / 32;
     const unsigned int lane_id = threadIdx.x % 32;
     float data_array[9];
-    float temp_result[2*7] = {0.0f};
+    float temp_result[3*7] = {0.0f};
     conv_1_128_7_7_32_load_input_2_shared_memory(values,c_lens,ids,input,input_ids,channel_lens,warp_id,lane_id,batch_id,t_id,start_channel_index);
     __syncthreads();
     float v;
@@ -376,7 +448,7 @@ __global__ void conv_1_128_7_7_32_conv2d(float * __restrict__ values, unsigned i
     for(unsigned int n = threadIdx.x;n<32;n+=32){
         for(unsigned int c=start_channel_index;c<start_channel_index+2&&c<128;c++){
             unsigned int abs_c = c - start_channel_index;
-            unsigned int start_index = abs_c*(2+3-1)*(7+3-1);
+            unsigned int start_index = abs_c*(3+3-1)*(7+3-1);
             unsigned int end_index = start_index+channel_lens[abs_c];
             if(start_index == end_index){
                 continue;
@@ -389,7 +461,7 @@ __global__ void conv_1_128_7_7_32_conv2d(float * __restrict__ values, unsigned i
                 conv_1_128_7_7_32_switch_function(id,data_array,v,temp_result);
             }
         }
-        for (unsigned int th = 0; th < 2; ++th) {
+        for (unsigned int th = 0; th < 3; ++th) {
             for (unsigned int tw = 0; tw < 7; ++tw) {
                 if (tile_h_id + th >= 7 || tile_w_id + tw >= 7) {
                     continue;
@@ -398,7 +470,7 @@ __global__ void conv_1_128_7_7_32_conv2d(float * __restrict__ values, unsigned i
                                    n],temp_result[(th * 7 + tw)]);
             }
         }
-        for(unsigned int i=0;i<2*7;++i){
+        for(unsigned int i=0;i<3*7;++i){
             temp_result[i] = 0.0f;
         }
     }

@@ -396,7 +396,7 @@ __device__ void conv_1_128_112_112_128_load_input_2_shared_memory(float *values,
                                                                   float *shared_input,char *shared_ids,unsigned int *shared_lens,
                                                                   unsigned int warp_id,unsigned int lane_id,unsigned int batch_id,
                                                                   unsigned int tile_id,unsigned int tile_c_id){
-    for(unsigned int c_id=warp_id;c_id<4&&tile_c_id+c_id<128;c_id+=4){
+    for(unsigned int c_id=warp_id;c_id<16&&tile_c_id+c_id<128;c_id+=4){
         unsigned int end_index = c_lens[batch_id*128*896+(tile_c_id+c_id)*896+tile_id];
         if(lane_id ==0){
             shared_lens[c_id] = end_index;
@@ -412,16 +412,16 @@ __device__ void conv_1_128_112_112_128_load_input_2_shared_memory(float *values,
 __global__ void conv_1_128_112_112_128_conv2d(float * __restrict__ values, unsigned int * __restrict__ c_lens,
                                               char * __restrict__ ids,
                                               const float * __restrict__ kernel, float * __restrict__ outputs){
-    __shared__ float input[4*(2+3-1)*(7+3-1)];
-    __shared__ char input_ids[4*(2+3-1)*(7+3-1)];
-    __shared__ unsigned int channel_lens[(4)];
+    __shared__ float input[16*(2+3-1)*(7+3-1)];
+    __shared__ char input_ids[16*(2+3-1)*(7+3-1)];
+    __shared__ unsigned int channel_lens[(16)];
 
-    const unsigned int batch_id = (blockIdx.x/(32*896));
-    const unsigned int t_id = (blockIdx.x - batch_id*32*896)/32;
+    const unsigned int batch_id = (blockIdx.x/(8*896));
+    const unsigned int t_id = (blockIdx.x - batch_id*8*896)/8;
     const unsigned int tile_h_id = (t_id / 16)*2;
     const unsigned int tile_w_id = (t_id % 16)*7;
-    const unsigned int index = blockIdx.x % (32);
-    const unsigned int start_channel_index = index*4;
+    const unsigned int index = blockIdx.x % (8);
+    const unsigned int start_channel_index = index*16;
     const unsigned int warp_id = threadIdx.x / 32;
     const unsigned int lane_id = threadIdx.x % 32;
     float data_array[9];
@@ -431,7 +431,7 @@ __global__ void conv_1_128_112_112_128_conv2d(float * __restrict__ values, unsig
     float v;
     unsigned int id;
     for(unsigned int n = threadIdx.x;n<128;n+=128){
-        for(unsigned int c=start_channel_index;c<start_channel_index+4&&c<128;c++){
+        for(unsigned int c=start_channel_index;c<start_channel_index+16&&c<128;c++){
             unsigned int abs_c = c - start_channel_index;
             unsigned int start_index = abs_c*(2+3-1)*(7+3-1);
             unsigned int end_index = start_index+channel_lens[abs_c];
